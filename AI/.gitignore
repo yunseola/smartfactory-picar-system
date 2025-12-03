@@ -1,0 +1,16 @@
+# 추출 프레임 폴더 전부 무시
+frames_all/
+**/frames_all/
+
+# 가상환경, 캐시 등
+.venv/
+__pycache__/
+*.pyc
+
+# 모델/런 결과물
+runs*/
+
+
+# 환경변수(권장: 커밋 금지)
+.env
+.env.*

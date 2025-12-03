@@ -1,0 +1,9 @@
+/*
+!/roboflow_frontend/
+!README.md
+!.gitignore
+
+# FE 내부에서만 무시할 것들
+roboflow_frontend/node_modules/
+roboflow_frontend/.env
+roboflow_frontend/dist/

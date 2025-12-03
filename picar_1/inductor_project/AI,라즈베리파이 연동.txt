@@ -1,0 +1,731 @@
+Microsoft Windows [Version 10.0.26100.6899]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SSAFY>ssh pi@192.168.30.40
+pi@192.168.30.40's password:
+Linux raspberrypi 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Nov  4 02:50:06 2025 from 192.168.30.183
+pi@raspberrypi:~ $ cd adeept_picarpro/Server/
+pi@raspberrypi:~/adeept_picarpro/Server $ sudo python3 WebServer.py
+/usr/lib/python3/dist-packages/gpiozero/input_devices.py:852: PWMSoftwareFallback: For more accurate readings, use the pigpio pin factory.See https://gpiozero.readthedocs.io/en/stable/api_input.html#distancesensor-hc-sr04 for more info
+  warnings.warn(PWMSoftwareFallback(
+/usr/lib/python3/dist-packages/gpiozero/input_devices.py:975: DistanceSensorNoEcho: no echo received
+  warnings.warn(DistanceSensorNoEcho('no echo received'))
+/usr/lib/python3/dist-packages/gpiozero/input_devices.py:975: DistanceSensorNoEcho: no echo received
+  warnings.warn(DistanceSensorNoEcho('no echo received'))
+[0:24:29.966889528] [2067]  INFO Camera camera_manager.cpp:330 libcamera v0.5.2+99-bfd68f78
+[0:24:29.994367258] [2068]  INFO IPAProxy ipa_proxy.cpp:180 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/ov5647.json
+[0:24:30.000202465] [2068]  INFO Camera camera_manager.cpp:220 Adding camera '/base/soc/i2c0mux/i2c@1/ov5647@36' for pipeline handler rpi/vc4
+[0:24:30.000288002] [2068]  INFO RPI vc4.cpp:440 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media3 and ISP device /dev/media0
+[0:24:30.000326335] [2068]  INFO RPI pipeline_base.cpp:1107 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:24:30.007197435] [2067]  INFO Camera camera.cpp:1215 configuring streams: (0) 640x480-RGB888/sRGB (1) 640x480-SGBRG10_CSI2P/RAW
+[0:24:30.007659510] [2068]  INFO RPI vc4.cpp:615 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 640x480-SGBRG10_1X10/RAW - Selected unicam format: 640x480-pGAA/RAW
+OLED disconnected
+
+Exception in thread Thread-13:
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "/home/pi/adeept_picarpro/Server/OLED.py", line 38, in run
+    with canvas(device) as draw:
+                ^^^^^^
+NameError: name 'device' is not defined
+192.168.30.40
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.30.40:5000
+Press CTRL+C to quit
+waiting for connection...
+192.168.30.183 - - [04/Nov/2025 02:52:35] "GET / HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:35] "GET /css/app.62783cd0.css HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:35] "GET /css/chunk-vendors.7b51feb1.css HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:35] "GET /js/chunk-vendors.bf4e78a7.js HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:35] "GET /js/app.6bdf8bc6.js HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /api/img/bg.jpg HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /fonts/roboto-latin-500italic.db4a2a23.woff2 HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /fonts/roboto-latin-400.479970ff.woff2 HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /fonts/roboto-latin-500.020c97dc.woff2 HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /fonts/materialdesignicons-webfont.d0066537.woff2 HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /fonts/roboto-latin-700.2735a3a6.woff2 HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /api/img/icons/logo.png HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:38] "GET /video_feed?rand=0 HTTP/1.1" 200 -
+192.168.30.183 - - [04/Nov/2025 02:52:39] "GET /favicon.ico HTTP/1.1" 200 -
+get_info
+192.168.30.183 - - [04/Nov/2025 02:52:44] "GET /fonts/roboto-latin-700italic.da0e7178.woff2 HTTP/1.1" 200 -
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+get_info
+^CTraceback (most recent call last):
+  File "/home/pi/adeept_picarpro/Server/WebServer.py", line 516, in <module>
+    asyncio.get_event_loop().run_forever()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 683, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 2004, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.13/selectors.py", line 452, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+^CTraceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1542, in _shutdown
+    _thread_shutdown()
+KeyboardInterrupt:
+Segmentation fault
+pi@raspberrypi:~/adeept_picarpro/Server $ client_loop: send disconnect: Connection reset
+
+C:\Users\SSAFY>scp "C:\Users\SSAFY\Desktop\inductor_project\runs\detect\train\weights\best.pt" pi@192.168.30.40:/home/pi/inductor_project/
+pi@192.168.30.40's password:
+scp: dest open "/home/pi/inductor_project/": Failure
+scp: failed to upload file C:/Users/SSAFY/Desktop/inductor_project/runs/detect/train/weights/best.pt to /home/pi/inductor_project/
+
+C:\Users\SSAFY>ssh pi@192.168.30.40
+pi@192.168.30.40's password:
+Linux raspberrypi 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Nov  4 02:51:47 2025 from 192.168.30.183
+pi@raspberrypi:~ $ mkdir -p /home/pi/inductor_project
+pi@raspberrypi:~ $ ls /home/pi/inductor_project
+best.pt
+pi@raspberrypi:~ $ sudo apt update
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+Get:4 http://archive.raspberrypi.com/debian trixie InRelease [54.8 kB]
+Get:5 http://archive.raspberrypi.com/debian trixie/main arm64 Packages [352 kB]
+Fetched 407 kB in 3s (136 kB/s)
+121 packages can be upgraded. Run 'apt list --upgradable' to see them.
+pi@raspberrypi:~ $ sudo apt install -y python3-opencv
+python3-opencv is already the newest version (4.10.0+dfsg-5).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 121
+pi@raspberrypi:~ $ python3 -m venv .venv
+pi@raspberrypi:~ $ source .venv/bin/activate
+(.venv) pi@raspberrypi:~ $ pip install ultralytics==8.3.0
+Collecting ultralytics==8.3.0
+  Downloading ultralytics-8.3.0-py3-none-any.whl.metadata (34 kB)
+Collecting numpy<2.0.0,>=1.23.0 (from ultralytics==8.3.0)
+  Downloading numpy-1.26.4.tar.gz (15.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.8/15.8 MB 3.6 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... /^canceled
+ERROR: Operation cancelled by user
+(.venv) pi@raspberrypi:~ $ deactivate
+pi@raspberrypi:~ $ cd ~/inductor_project/
+pi@raspberrypi:~/inductor_project $ nano live_detect.py
+pi@raspberrypi:~/inductor_project $ ls
+best.pt  live_detect.py
+pi@raspberrypi:~/inductor_project $ sudo python3 live_detect.py
+Traceback (most recent call last):
+  File "/home/pi/inductor_project/live_detect.py", line 4, in <module>
+    from ultralytics import YOLO
+ModuleNotFoundError: No module named 'ultralytics'
+pi@raspberrypi:~/inductor_project $ sudo apt update
+sudo apt install -y python3-pip
+python3 -m pip install --upgrade pip
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+Hit:4 http://archive.raspberrypi.com/debian trixie InRelease
+121 packages can be upgraded. Run 'apt list --upgradable' to see them.
+python3-pip is already the newest version (25.1.1+dfsg-1).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 121
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+
+    For more information visit http://rptl.io/venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+pi@raspberrypi:~/inductor_project $ sudo apt update
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+Hit:4 http://archive.raspberrypi.com/debian trixie InRelease
+121 packages can be upgraded. Run 'apt list --upgradable' to see them.
+pi@raspberrypi:~/inductor_project $ sudo apt install -y python3-pip
+python3 -m pip install --upgrade pip --break-system-packages
+python3-pip is already the newest version (25.1.1+dfsg-1).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 121
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pip in /usr/lib/python3/dist-packages (25.1.1)
+Collecting pip
+  Using cached pip-25.3-py3-none-any.whl.metadata (4.7 kB)
+Using cached pip-25.3-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  WARNING: The scripts pip, pip3 and pip3.13 are installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pip-25.3
+pi@raspberrypi:~/inductor_project $ sudo apt install -y python3-opencv
+python3-opencv is already the newest version (4.10.0+dfsg-5).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 121
+pi@raspberrypi:~/inductor_project $ python3 -m pip install ultralytics==8.3.0 --break-system-packages
+Defaulting to user installation because normal site-packages is not writeable
+Collecting ultralytics==8.3.0
+  Using cached ultralytics-8.3.0-py3-none-any.whl.metadata (34 kB)
+Collecting numpy<2.0.0,>=1.23.0 (from ultralytics==8.3.0)
+  Using cached numpy-1.26.4.tar.gz (15.8 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting matplotlib>=3.3.0 (from ultralytics==8.3.0)
+  Downloading matplotlib-3.10.7-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (11 kB)
+Collecting opencv-python>=4.6.0 (from ultralytics==8.3.0)
+  Downloading opencv_python-4.12.0.88-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (19 kB)
+Requirement already satisfied: pillow>=7.1.2 in /usr/lib/python3/dist-packages (from ultralytics==8.3.0) (11.1.0)
+Requirement already satisfied: pyyaml>=5.3.1 in /usr/lib/python3/dist-packages (from ultralytics==8.3.0) (6.0.2)
+Requirement already satisfied: requests>=2.23.0 in /usr/lib/python3/dist-packages (from ultralytics==8.3.0) (2.32.3)
+Collecting scipy>=1.4.1 (from ultralytics==8.3.0)
+  Downloading scipy-1.16.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (62 kB)
+Collecting torch>=1.8.0 (from ultralytics==8.3.0)
+  Downloading torch-2.9.0-cp313-cp313-manylinux_2_28_aarch64.whl.metadata (30 kB)
+Collecting torchvision>=0.9.0 (from ultralytics==8.3.0)
+  Downloading torchvision-0.24.0-cp313-cp313-manylinux_2_28_aarch64.whl.metadata (5.9 kB)
+Requirement already satisfied: tqdm>=4.64.0 in /usr/lib/python3/dist-packages (from ultralytics==8.3.0) (4.67.1)
+Requirement already satisfied: psutil in /usr/lib/python3/dist-packages (from ultralytics==8.3.0) (7.0.0)
+Collecting py-cpuinfo (from ultralytics==8.3.0)
+  Downloading py_cpuinfo-9.0.0-py3-none-any.whl.metadata (794 bytes)
+Collecting pandas>=1.1.4 (from ultralytics==8.3.0)
+  Downloading pandas-2.3.3-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (91 kB)
+Collecting seaborn>=0.11.0 (from ultralytics==8.3.0)
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting ultralytics-thop>=2.0.0 (from ultralytics==8.3.0)
+  Downloading ultralytics_thop-2.0.18-py3-none-any.whl.metadata (14 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.3.0->ultralytics==8.3.0)
+  Downloading contourpy-1.3.3-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.3.0->ultralytics==8.3.0)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.3.0->ultralytics==8.3.0)
+  Downloading fonttools-4.60.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (112 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.3.0->ultralytics==8.3.0)
+  Downloading kiwisolver-1.4.9-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (6.3 kB)
+Requirement already satisfied: packaging>=20.0 in /usr/lib/python3/dist-packages (from matplotlib>=3.3.0->ultralytics==8.3.0) (25.0)
+Collecting pyparsing>=3 (from matplotlib>=3.3.0->ultralytics==8.3.0)
+  Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/lib/python3/dist-packages (from matplotlib>=3.3.0->ultralytics==8.3.0) (2.9.0)
+INFO: pip is looking at multiple versions of opencv-python to determine which version is compatible with other requirements. This could take a while.
+Collecting opencv-python>=4.6.0 (from ultralytics==8.3.0)
+  Downloading opencv_python-4.11.0.86-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (20 kB)
+Collecting pytz>=2020.1 (from pandas>=1.1.4->ultralytics==8.3.0)
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas>=1.1.4->ultralytics==8.3.0)
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/lib/python3/dist-packages (from requests>=2.23.0->ultralytics==8.3.0) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.23.0->ultralytics==8.3.0) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.23.0->ultralytics==8.3.0) (2.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.23.0->ultralytics==8.3.0) (2025.1.31)
+Collecting filelock (from torch>=1.8.0->ultralytics==8.3.0)
+  Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/lib/python3/dist-packages (from torch>=1.8.0->ultralytics==8.3.0) (4.13.2)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from torch>=1.8.0->ultralytics==8.3.0) (78.1.1)
+Collecting sympy>=1.13.3 (from torch>=1.8.0->ultralytics==8.3.0)
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch>=1.8.0->ultralytics==8.3.0)
+  Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from torch>=1.8.0->ultralytics==8.3.0) (3.1.6)
+Collecting fsspec>=0.8.5 (from torch>=1.8.0->ultralytics==8.3.0)
+  Downloading fsspec-2025.10.0-py3-none-any.whl.metadata (10 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=1.8.0->ultralytics==8.3.0)
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/lib/python3/dist-packages (from jinja2->torch>=1.8.0->ultralytics==8.3.0) (2.1.5)
+Downloading ultralytics-8.3.0-py3-none-any.whl (881 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 881.3/881.3 kB 3.9 MB/s  0:00:00
+Downloading matplotlib-3.10.7-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (9.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 5.3 MB/s  0:00:01
+Downloading contourpy-1.3.3-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (334 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.60.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 3.9 MB/s  0:00:01
+Downloading kiwisolver-1.4.9-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 3.7 MB/s  0:00:00
+Downloading opencv_python-4.11.0.86-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (42.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.2/42.2 MB 2.6 MB/s  0:00:16
+Downloading pandas-2.3.3-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (11.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.7/11.7 MB 4.3 MB/s  0:00:02
+Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading scipy-1.16.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (33.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.3/33.3 MB 4.1 MB/s  0:00:08
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading torch-2.9.0-cp313-cp313-manylinux_2_28_aarch64.whl (104.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.1/104.1 MB 4.1 MB/s  0:00:25
+Downloading fsspec-2025.10.0-py3-none-any.whl (200 kB)
+Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 2.5 MB/s  0:00:00
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 3.0 MB/s  0:00:02
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 2.3 MB/s  0:00:00
+Downloading torchvision-0.24.0-cp313-cp313-manylinux_2_28_aarch64.whl (2.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 4.0 MB/s  0:00:00
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading ultralytics_thop-2.0.18-py3-none-any.whl (28 kB)
+Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Building wheels for collected packages: numpy
+  Building wheel for numpy (pyproject.toml) ... done
+  Created wheel for numpy: filename=numpy-1.26.4-cp313-cp313-linux_aarch64.whl size=7570866 sha256=e3147e0dee6b23793b516384f8a37f1f5e49ce9ef1a475432cad5dd814f0b5a7
+  Stored in directory: /home/pi/.cache/pip/wheels/8b/2d/9f/b6b46373f328e2ef50388915d351ccacbedac929459b5459bf
+Successfully built numpy
+Installing collected packages: pytz, py-cpuinfo, mpmath, tzdata, sympy, pyparsing, numpy, networkx, kiwisolver, fsspec, fonttools, filelock, cycler, torch, scipy, pandas, opencv-python, contourpy, ultralytics-thop, torchvision, matplotlib, seaborn, ultralytics
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/23 [pytz]  WARNING: The script cpuinfo is installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  4/23 [sympy]  WARNING: The script isympy is installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/23 [numpy]  WARNING: The script f2py is installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ 10/23 [fonttools]  WARNING: The scripts fonttools, pyftmerge, pyftsubset and ttx are installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━ 13/23 [torch]  WARNING: The scripts torchfrtrace and torchrun are installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ 22/23 [ultralytics]  WARNING: The scripts ultralytics and yolo are installed in '/home/pi/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+types-seaborn 0.13.2 requires pandas-stubs, which is not installed.
+Successfully installed contourpy-1.3.3 cycler-0.12.1 filelock-3.20.0 fonttools-4.60.1 fsspec-2025.10.0 kiwisolver-1.4.9 matplotlib-3.10.7 mpmath-1.3.0 networkx-3.5 numpy-1.26.4 opencv-python-4.11.0.86 pandas-2.3.3 py-cpuinfo-9.0.0 pyparsing-3.2.5 pytz-2025.2 scipy-1.16.3 seaborn-0.13.2 sympy-1.14.0 torch-2.9.0 torchvision-0.24.0 tzdata-2025.2 ultralytics-8.3.0 ultralytics-thop-2.0.18
+pi@raspberrypi:~/inductor_project $ python3 -m ultralytics check
+Creating new Ultralytics Settings v0.0.6 file ✅
+View Ultralytics Settings with 'yolo settings' or at '/home/pi/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+/usr/bin/python3: No module named ultralytics.__main__; 'ultralytics' is a package and cannot be directly executed
+pi@raspberrypi:~/inductor_project $ python3 -c "import ultralytics as u; print('ultralytics', u.__version__)"
+ultralytics 8.3.0
+pi@raspberrypi:~/inductor_project $ python3 live_detect.py
+⚠️ 프레임을 읽지 못했어요.
+pi@raspberrypi:~/inductor_project $ cd..
+-bash: cd..: command not found
+pi@raspberrypi:~/inductor_project $ cd ..
+pi@raspberrypi:~ $ cd adeept_picarpro/Examples/02_Servo/
+pi@raspberrypi:~/adeept_picarpro/Examples/02_Servo $ cd ..
+pi@raspberrypi:~/adeept_picarpro/Examples $ cd ..
+pi@raspberrypi:~/adeept_picarpro $ cd ..
+pi@raspberrypi:~ $ cd ~/inductor_project/
+pi@raspberrypi:~/inductor_project $ client_loop: send disconnect: Connection reset
+
+C:\Users\SSAFY>
+C:\Users\SSAFY>ssh pi@192.168.30.40
+ssh: connect to host 192.168.30.40 port 22: Connection timed out
+
+C:\Users\SSAFY>ssh pi@192.168.30.40
+pi@192.168.30.40's password:
+Linux raspberrypi 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Nov  4 07:35:57 2025 from 192.168.30.183
+pi@raspberrypi:~ $ v4l2-ctl --list-devices
+bcm2835-codec-decode (platform:bcm2835-codec):
+        /dev/video10
+        /dev/video11
+        /dev/video12
+        /dev/video18
+        /dev/video31
+
+bcm2835-isp (platform:bcm2835-isp):
+        /dev/video13
+        /dev/video14
+        /dev/video15
+        /dev/video16
+        /dev/video20
+        /dev/video21
+        /dev/video22
+        /dev/video23
+        /dev/media2
+        /dev/media4
+
+unicam (platform:fe801000.csi):
+        /dev/video0
+        /dev/media0
+
+rpi-hevc-dec (platform:rpi-hevc-dec):
+        /dev/video19
+        /dev/media1
+
+bcm2835-codec (vchiq:bcm2835-codec):
+        /dev/media3
+pi@raspberrypi:~ $ ls -l /dev/video*
+crw-rw----+ 1 root video 81, 12 Nov  4 08:48 /dev/video0
+crw-rw----+ 1 root video 81,  3 Nov  4 08:48 /dev/video10
+crw-rw----+ 1 root video 81,  6 Nov  4 08:48 /dev/video11
+crw-rw----+ 1 root video 81,  7 Nov  4 08:48 /dev/video12
+crw-rw----+ 1 root video 81,  1 Nov  4 08:48 /dev/video13
+crw-rw----+ 1 root video 81,  2 Nov  4 08:48 /dev/video14
+crw-rw----+ 1 root video 81,  4 Nov  4 08:48 /dev/video15
+crw-rw----+ 1 root video 81,  5 Nov  4 08:48 /dev/video16
+crw-rw----+ 1 root video 81,  9 Nov  4 08:48 /dev/video18
+crw-rw----+ 1 root video 81,  0 Nov  4 08:48 /dev/video19
+crw-rw----+ 1 root video 81,  8 Nov  4 08:48 /dev/video20
+crw-rw----+ 1 root video 81, 10 Nov  4 08:48 /dev/video21
+crw-rw----+ 1 root video 81, 13 Nov  4 08:48 /dev/video22
+crw-rw----+ 1 root video 81, 14 Nov  4 08:48 /dev/video23
+crw-rw----+ 1 root video 81, 11 Nov  4 08:48 /dev/video31
+pi@raspberrypi:~ $ libcamera-hello -t 5000
+-bash: libcamera-hello: command not found
+pi@raspberrypi:~ $ sudo apt update
+sudo apt install -y libcamera-apps python3-libcamera python3-picamera2 \
+                    v4l-utils \
+                    gstreamer1.0-tools gstreamer1.0-libcamera \
+                    gstreamer1.0-plugins-base gstreamer1.0-plugins-good
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+Hit:4 http://archive.raspberrypi.com/debian trixie InRelease
+121 packages can be upgraded. Run 'apt list --upgradable' to see them.
+python3-picamera2 is already the newest version (0.3.31-1).
+v4l-utils is already the newest version (1.30.1-1).
+gstreamer1.0-plugins-base is already the newest version (1.26.2-1).
+gstreamer1.0-plugins-base set to manually installed.
+gstreamer1.0-plugins-good is already the newest version (1.26.2-1).
+gstreamer1.0-plugins-good set to manually installed.
+Upgrading:
+  libcamera-ipa    libpisp1           rpicam-apps-encoder
+  libcamera-tools  librpicam-app1     rpicam-apps-lite
+  libcamera-v4l2   python3-libcamera  rpicam-apps-opencv-postprocess
+  libcamera0.5     rpicam-apps        rpicam-apps-preview
+  libpisp-common   rpicam-apps-core
+
+Installing:
+  gstreamer1.0-libcamera  gstreamer1.0-tools  libcamera-apps
+
+Summary:
+  Upgrading: 14, Installing: 3, Removing: 0, Not Upgrading: 107
+  Download size: 3,514 kB
+  Space needed: 482 kB / 19.9 GB available
+
+Get:1 http://deb.debian.org/debian trixie/main arm64 gstreamer1.0-tools arm64 1.26.2-2 [101 kB]
+Get:2 http://archive.raspberrypi.com/debian trixie/main arm64 libpisp1 arm64 1.3.0-1 [219 kB]
+Get:3 http://archive.raspberrypi.com/debian trixie/main arm64 libpisp-common all 1.3.0-1 [8,072 B]
+Get:4 http://archive.raspberrypi.com/debian trixie/main arm64 libcamera0.5 arm64 0.5.2+rpt20250903-1+b1 [715 kB]
+Get:5 http://archive.raspberrypi.com/debian trixie/main arm64 libcamera-ipa arm64 0.5.2+rpt20250903-1+b1 [997 kB]
+Get:6 http://archive.raspberrypi.com/debian trixie/main arm64 gstreamer1.0-libcamera arm64 0.5.2+rpt20250903-1+b1 [78.6 kB]
+Get:7 http://archive.raspberrypi.com/debian trixie/main arm64 librpicam-app1 arm64 1.9.1-1 [208 kB]
+Get:8 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps-core arm64 1.9.1-1 [140 kB]
+Get:9 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps-encoder arm64 1.9.1-1 [25.8 kB]
+Get:10 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps-opencv-postprocess arm64 1.9.1-1 [49.0 kB]
+Get:11 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps-preview arm64 1.9.1-1 [22.5 kB]
+Get:12 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps all 1.9.1-1 [4,268 B]
+Get:13 http://archive.raspberrypi.com/debian trixie/main arm64 libcamera-apps all 1.9.1-1 [3,844 B]
+Get:14 http://archive.raspberrypi.com/debian trixie/main arm64 libcamera-tools arm64 0.5.2+rpt20250903-1+b1 [479 kB]
+Get:15 http://archive.raspberrypi.com/debian trixie/main arm64 libcamera-v4l2 arm64 0.5.2+rpt20250903-1+b1 [58.6 kB]
+Get:16 http://archive.raspberrypi.com/debian trixie/main arm64 python3-libcamera arm64 0.5.2+rpt20250903-1+b1 [401 kB]
+Get:17 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps-lite all 1.9.1-1 [3,852 B]
+Fetched 3,514 kB in 4s (975 kB/s)
+apt-listchanges: Reading changelogs...
+(Reading database ... 121415 files and directories currently installed.)
+Preparing to unpack .../00-libpisp1_1.3.0-1_arm64.deb ...
+Unpacking libpisp1:arm64 (1.3.0-1) over (1.2.1-2) ...
+Preparing to unpack .../01-libpisp-common_1.3.0-1_all.deb ...
+Unpacking libpisp-common (1.3.0-1) over (1.2.1-2) ...
+Preparing to unpack .../02-libcamera0.5_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking libcamera0.5:arm64 (0.5.2+rpt20250903-1+b1) over (0.5.2+rpt20250903-1) ...
+Preparing to unpack .../03-libcamera-ipa_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking libcamera-ipa:arm64 (0.5.2+rpt20250903-1+b1) over (0.5.2+rpt20250903-1) ...
+Selecting previously unselected package gstreamer1.0-libcamera:arm64.
+Preparing to unpack .../04-gstreamer1.0-libcamera_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking gstreamer1.0-libcamera:arm64 (0.5.2+rpt20250903-1+b1) ...
+Selecting previously unselected package gstreamer1.0-tools.
+Preparing to unpack .../05-gstreamer1.0-tools_1.26.2-2_arm64.deb ...
+Unpacking gstreamer1.0-tools (1.26.2-2) ...
+Preparing to unpack .../06-librpicam-app1_1.9.1-1_arm64.deb ...
+Unpacking librpicam-app1:arm64 (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../07-rpicam-apps-core_1.9.1-1_arm64.deb ...
+Unpacking rpicam-apps-core (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../08-rpicam-apps-encoder_1.9.1-1_arm64.deb ...
+Unpacking rpicam-apps-encoder:arm64 (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../09-rpicam-apps-opencv-postprocess_1.9.1-1_arm64.deb ...
+Unpacking rpicam-apps-opencv-postprocess (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../10-rpicam-apps-preview_1.9.1-1_arm64.deb ...
+Unpacking rpicam-apps-preview:arm64 (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../11-rpicam-apps_1.9.1-1_all.deb ...
+Unpacking rpicam-apps (1.9.1-1) over (1.9.0-1) ...
+Selecting previously unselected package libcamera-apps.
+Preparing to unpack .../12-libcamera-apps_1.9.1-1_all.deb ...
+Unpacking libcamera-apps (1.9.1-1) ...
+Preparing to unpack .../13-libcamera-tools_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking libcamera-tools (0.5.2+rpt20250903-1+b1) over (0.5.2+rpt20250903-1) ...
+Preparing to unpack .../14-libcamera-v4l2_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking libcamera-v4l2:arm64 (0.5.2+rpt20250903-1+b1) over (0.5.2+rpt20250903-1) ...
+Preparing to unpack .../15-python3-libcamera_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking python3-libcamera (0.5.2+rpt20250903-1+b1) over (0.5.2+rpt20250903-1) ...
+Preparing to unpack .../16-rpicam-apps-lite_1.9.1-1_all.deb ...
+Unpacking rpicam-apps-lite (1.9.1-1) over (1.9.0-1) ...
+Setting up libpisp-common (1.3.0-1) ...
+Setting up gstreamer1.0-tools (1.26.2-2) ...
+Setting up libpisp1:arm64 (1.3.0-1) ...
+Setting up libcamera-ipa:arm64 (0.5.2+rpt20250903-1+b1) ...
+Setting up libcamera0.5:arm64 (0.5.2+rpt20250903-1+b1) ...
+Setting up rpicam-apps-encoder:arm64 (1.9.1-1) ...
+Setting up librpicam-app1:arm64 (1.9.1-1) ...
+Setting up gstreamer1.0-libcamera:arm64 (0.5.2+rpt20250903-1+b1) ...
+Setting up rpicam-apps-opencv-postprocess (1.9.1-1) ...
+Setting up rpicam-apps-core (1.9.1-1) ...
+Setting up libcamera-v4l2:arm64 (0.5.2+rpt20250903-1+b1) ...
+Setting up rpicam-apps-preview:arm64 (1.9.1-1) ...
+Setting up python3-libcamera (0.5.2+rpt20250903-1+b1) ...
+Setting up libcamera-tools (0.5.2+rpt20250903-1+b1) ...
+Setting up rpicam-apps (1.9.1-1) ...
+Setting up rpicam-apps-lite (1.9.1-1) ...
+Setting up libcamera-apps (1.9.1-1) ...
+Processing triggers for libc-bin (2.41-12+rpt1) ...
+Processing triggers for man-db (2.13.1-1) ...
+pi@raspberrypi:~ $ groups
+pi adm dialout cdrom sudo audio video plugdev games users netdev lpadmin gpio i2c spi render input
+pi@raspberrypi:~ $ libcamera-hello -t 3000
+-bash: libcamera-hello: command not found
+pi@raspberrypi:~ $ rpicam-hello -t 3000
+[0:11:40.773836891] [2244]  INFO Camera camera_manager.cpp:330 libcamera v0.5.2+99-bfd68f78
+[0:11:40.825834691] [2247]  INFO IPAProxy ipa_proxy.cpp:180 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/ov5647.json
+[0:11:40.831759626] [2247]  INFO Camera camera_manager.cpp:220 Adding camera '/base/soc/i2c0mux/i2c@1/ov5647@36' for pipeline handler rpi/vc4
+[0:11:40.831860867] [2247]  INFO RPI vc4.cpp:440 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media2
+[0:11:40.831910738] [2247]  INFO RPI pipeline_base.cpp:1107 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+Made X/EGL preview window
+Made DRM preview window
+Preview window unavailable
+Mode selection for 1296:972:12:P
+    SGBRG10_CSI2P,640x480/0 - Score: 3296
+    SGBRG10_CSI2P,1296x972/0 - Score: 1000
+    SGBRG10_CSI2P,1920x1080/0 - Score: 1349.67
+    SGBRG10_CSI2P,2592x1944/0 - Score: 1567
+Stream configuration adjusted
+[0:11:41.095664568] [2244]  INFO Camera camera.cpp:1215 configuring streams: (0) 1296x972-YUV420/sYCC (1) 1296x972-SGBRG10_CSI2P/RAW
+[0:11:41.096092218] [2247]  INFO RPI vc4.cpp:615 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10/RAW - Selected unicam format: 1296x972-pGAA/RAW
+#10 (0.00 fps) exp 16619.00 ag 2.00 dg 1.00
+#11 (30.01 fps) exp 16684.00 ag 2.00 dg 1.00
+#12 (30.00 fps) exp 16663.00 ag 2.00 dg 1.00
+#13 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#14 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#15 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#16 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#17 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#18 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#19 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#20 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#21 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#22 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#23 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#24 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#25 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#26 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#27 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#28 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#29 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#30 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#31 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#32 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#33 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#34 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#35 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#36 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#37 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#38 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#39 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#40 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#41 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#42 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#43 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#44 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#45 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#46 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#47 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#48 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#49 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#50 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#51 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#52 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#53 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#54 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#55 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#56 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#57 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#58 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#59 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#60 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#61 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#62 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#63 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#64 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#65 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#66 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#67 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#68 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#69 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#70 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#71 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#72 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#73 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#74 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#75 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#76 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#77 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#78 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#79 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#80 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#81 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#82 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#83 (30.00 fps) exp 16641.00 ag 2.00 dg 1.00
+#84 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#85 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+#86 (30.01 fps) exp 16641.00 ag 2.00 dg 1.00
+pi@raspberrypi:~ $ sudo apt update
+sudo apt install -y python3-picamera2 python3-opencv
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+Hit:4 http://archive.raspberrypi.com/debian trixie InRelease
+107 packages can be upgraded. Run 'apt list --upgradable' to see them.
+python3-picamera2 is already the newest version (0.3.31-1).
+python3-opencv is already the newest version (4.10.0+dfsg-5).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 107
+pi@raspberrypi:~ $ python3 - <<'PY'
+from picamera2 import Picamera2
+import cv2
+
+picam2 = Picamera2()
+config = picam2.create_preview_configuration(main={"size": (1280,720), "format":"BGR888"})
+picam2.configure(config)
+picam2.start()
+
+frame = picam2.capture_array()
+print("Got frame:", frame.shape)
+cv2.imwrite("test_picam2.jpg", frame)
+picam2.stop()
+PY
+[0:13:59.949705969] [2287]  INFO Camera camera_manager.cpp:330 libcamera v0.5.2+99-bfd68f78
+[0:13:59.975485207] [2290]  INFO IPAProxy ipa_proxy.cpp:180 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/ov5647.json
+[0:13:59.981373407] [2290]  INFO Camera camera_manager.cpp:220 Adding camera '/base/soc/i2c0mux/i2c@1/ov5647@36' for pipeline handler rpi/vc4
+[0:13:59.981433054] [2290]  INFO RPI vc4.cpp:440 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media2
+[0:13:59.981464793] [2290]  INFO RPI pipeline_base.cpp:1107 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:13:59.988367946] [2287]  INFO Camera camera.cpp:1215 configuring streams: (0) 1280x720-BGR888/sRGB (1) 1920x1080-SGBRG10_CSI2P/RAW
+[0:13:59.988844673] [2290]  INFO RPI vc4.cpp:615 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1920x1080-SGBRG10_1X10/RAW - Selected unicam format: 1920x1080-pGAA/RAW
+Got frame: (720, 1280, 3)
+pi@raspberrypi:~ $ cd ~/inductor_project
+nano live_detect.py
+pi@raspberrypi:~/inductor_project $ python3 live_detect.py
+^CTraceback (most recent call last):
+  File "/home/pi/inductor_project/live_detect.py", line 5, in <module>
+    from picamera2 import Picamera2
+  File "/usr/lib/python3/dist-packages/picamera2/__init__.py", line 11, in <module>
+    from .picamera2 import Picamera2, Preview
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 30, in <module>
+    from picamera2.encoders import Encoder, H264Encoder, MJPEGEncoder, Quality
+  File "/usr/lib/python3/dist-packages/picamera2/encoders/__init__.py", line 7, in <module>
+    from .encoder import Encoder, Quality
+  File "/usr/lib/python3/dist-packages/picamera2/encoders/encoder.py", line 7, in <module>
+    import av
+  File "/usr/lib/python3/dist-packages/av/__init__.py", line 3, in <module>
+    from av._core import time_base, library_versions, ffmpeg_version_info
+  File "<frozen importlib._bootstrap>", line 645, in parent
+KeyboardInterrupt
+
+pi@raspberrypi:~/inductor_project $ echo $DISPLAY
+
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ python3 - <<'PY'
+from picamera2 import Picamera2
+import cv2
+picam2 = Picamera2()
+picam2.configure(picam2.create_preview_configuration(main={"size":(640,480), "format":"BGR888"}))
+picam2.start()
+img = picam2.capture_array()
+cv2.imwrite("check_bgr.jpg", img)
+picam2.stop()
+print("saved check_bgr.jpg", img.shape)
+PY
+[0:56:22.929273823] [2557]  INFO Camera camera_manager.cpp:330 libcamera v0.5.2+99-bfd68f78
+[0:56:22.965796361] [2560]  INFO IPAProxy ipa_proxy.cpp:180 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/ov5647.json
+[0:56:22.974581793] [2560]  INFO Camera camera_manager.cpp:220 Adding camera '/base/soc/i2c0mux/i2c@1/ov5647@36' for pipeline handler rpi/vc4
+[0:56:22.974683145] [2560]  INFO RPI vc4.cpp:440 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media2
+[0:56:22.974755478] [2560]  INFO RPI pipeline_base.cpp:1107 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:56:22.977383098] [2557]  INFO Camera camera.cpp:1020 Pipeline handler in use by another process
+Camera __init__ sequence did not complete.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 353, in __init__
+    self._open_camera()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 565, in _open_camera
+    self.camera.acquire()
+    ~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: Failed to acquire camera: Device or resource busy
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/usr/lib/python3/dist-packages/picamera2/picamera2.py", line 365, in __init__
+    raise RuntimeError("Camera __init__ sequence did not complete.")
+RuntimeError: Camera __init__ sequence did not complete.
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $ nano python3 live_detect.py
+pi@raspberrypi:~/inductor_project $

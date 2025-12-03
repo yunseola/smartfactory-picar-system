@@ -1,0 +1,10 @@
+/*
+!/roboflow_backend/
+!README.md
+!.gitignore
+
+# backend 내부 무시 항목
+roboflow_backend/.env
+roboflow_backend/.idea/
+roboflow_backend/build/
+roboflow_backend/target/

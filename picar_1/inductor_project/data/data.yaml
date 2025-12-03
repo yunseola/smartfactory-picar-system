@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['inductor']
+
+roboflow:
+  workspace: beverage-juubp
+  project: inductor_detection-0moe6
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/beverage-juubp/inductor_detection-0moe6/dataset/1

@@ -1,0 +1,17 @@
+⚠ 테스트 전: 바퀴를 공중에 띄우고 동작 확인 권장!
+=== START ALIGN (180° TURN) ===
+[STOP]
+[STEER] 90.0°
+STEP 1: LEFT + BACK (big turn)
+[STEER] 175.0°
+[BACK] pwm=0.80
+[STOP]
+=== ALIGN DONE ===
+[STOP]
+[STEER] 90.0°
+Clean exit.
+[INFO] 박스에 내려놓기 스크립트 시작
+[ACTION] 팔을 박스 높이로 내리는 중...
+[ACTION] 집게 열기 → 물건 내려놓기
+[ACTION] 팔을 원래 높이로 복귀
+[INFO] 박스에 물건을 내려놓았습니다. 종료합니다.

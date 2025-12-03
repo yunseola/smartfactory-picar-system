@@ -1,0 +1,68 @@
+spring:
+  application:
+    name: roboflow-backend
+
+  servlet:
+    context-path: /
+
+  devtools:
+    livereload:
+      enabled: true
+    remote:
+      restart:
+        enabled: true
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    # 메모리 H2 (서버 재시작하면 데이터 리셋)
+    url: jdbc:h2:mem:roboflow_db;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # 처음엔 create 또는 update 중 선택
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+  ssl:
+    enabled: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+    com.ssafy: DEBUG
+
+spring doc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+jwt:
+  secret: your-very-secret-key-1234567890123456
+
+cameras:
+  agv1: http://59.20.195.127:18084/offer
+  agv2: http://59.20.195.127:18085/offer
+  conveyor: http://192.168.30.90:8086/offer
+
+mqtt:
+  enabled: true
+  broker-url: tcp://k13e103.p.ssafy.io:1883   # 브로커 주소
+  client-id: roboflow-env-listener           # 아무 문자열 ok (클라이언트 id)
+  username: admin                            # 네가 준 값
+  password: ssafy                            # 네가 준 값
+  topic:
+    environment: arduino/th/data             # 아두이노가 퍼블리시 하는 토픽
